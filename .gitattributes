@@ -1,0 +1,12 @@
+# Shell scripts and SQL must keep LF endings so they run on Linux servers,
+# even when the repo is cloned/checked out on Windows.
+*.sh   text eol=lf
+*.sql  text eol=lf
+*.php  text eol=lf
+*.py   text eol=lf
+
+# Images are binary
+*.jpg  binary
+*.png  binary
+*.ico  binary
+*.docx binary

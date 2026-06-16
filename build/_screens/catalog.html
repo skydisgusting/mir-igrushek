@@ -1,0 +1,92 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
+<style>
+  :root{
+    --bg:#FFFFFF; --secondary:#F5DEB3; --accent:#DEB887; --sale:#FFDEAD;
+    --ink:#2c2723; --muted:#8a7f72; --line:#efe7d8;
+    --radius:14px; --radius-sm:10px;
+    --shadow:0 1px 2px rgba(60,45,20,.05), 0 8px 24px rgba(60,45,20,.06);
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{ margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink);
+        line-height:1.5; -webkit-font-smoothing:antialiased; }
+
+  header.top{ position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:14px;
+              padding:14px 32px; background:var(--secondary); border-bottom:1px solid var(--accent); }
+  header.top img.logo{ height:40px; width:auto; display:block; }
+  header.top h1{ font-size:18px; font-weight:700; letter-spacing:-.01em; margin:0; flex:1; }
+  header.top .who{ font-size:13px; color:var(--muted); background:#fff;
+                   padding:6px 12px; border-radius:999px; white-space:nowrap; }
+  header.top .who b{ color:var(--ink); font-weight:700; }
+
+  nav{ display:flex; align-items:center; gap:8px; padding:12px 32px; background:var(--bg);
+       border-bottom:1px solid var(--line); flex-wrap:wrap; }
+
+  a.btn,button.btn{ font-family:inherit; font-size:14px; line-height:1; text-decoration:none; color:var(--ink);
+      background:#fff; border:1px solid var(--line); padding:10px 16px; border-radius:999px; cursor:pointer; }
+  a.btn:hover,button.btn:hover{ background:var(--secondary); border-color:var(--accent); }
+  a.btn.accent,button.btn.accent{ background:var(--accent); border-color:var(--accent); color:#3a2c16; font-weight:700; }
+
+  main{ padding:32px; max-width:1200px; margin:0 auto; }
+
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:20px; }
+  .card{ border:1px solid var(--line); border-radius:var(--radius); background:#fff; padding:16px;
+         display:flex; flex-direction:column; box-shadow:var(--shadow); }
+  .card.sale{ background:var(--sale); border-color:var(--accent); }
+  .card.oos{ background:#D6ECFF; border-color:#9cc6ec; }
+  .card img.photo{ width:100%; height:190px; object-fit:contain; background:#fbf9f5;
+                   border-radius:var(--radius-sm); padding:8px; }
+  .card h3{ font-size:15px; font-weight:700; line-height:1.35; margin:14px 0 8px; }
+  .card .meta{ font-size:13px; color:var(--muted); line-height:1.55; flex:1; }
+  .card .meta small{ color:var(--muted); }
+  .price{ font-size:22px; font-weight:800; letter-spacing:-.02em; margin-top:12px;
+          display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .price .old{ color:#e0322f; text-decoration:line-through; font-weight:600; font-size:16px; }
+  .price .new{ color:#000; }
+
+  .badge{ display:inline-block; background:var(--secondary); color:#5b4a31; font-size:11px; font-weight:700;
+          letter-spacing:.02em; text-transform:uppercase; padding:4px 10px; border-radius:999px; margin-bottom:6px; }
+
+  table{ border-collapse:separate; border-spacing:0; width:100%; background:#fff;
+         border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); }
+  th,td{ padding:12px 14px; text-align:left; font-size:14px; border-bottom:1px solid var(--line); }
+  th{ background:var(--secondary); color:#5b4a31; font-weight:700; font-size:12px;
+      text-transform:uppercase; letter-spacing:.03em; }
+  tr:last-child td{ border-bottom:0; }
+
+  form.bar{ display:flex; gap:12px; flex-wrap:wrap; align-items:end; margin-bottom:24px;
+            background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow); }
+  label{ font-size:13px; font-weight:600; color:var(--muted); display:flex; flex-direction:column; gap:6px; }
+  input,select,textarea{ font-family:inherit; font-size:14px; color:var(--ink); padding:10px 12px;
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius-sm); outline:none; }
+  input:focus,select:focus,textarea:focus{ border-color:var(--accent); box-shadow:0 0 0 3px rgba(222,184,135,.35); }
+
+  .msg{ padding:12px 16px; border-radius:var(--radius-sm); background:var(--sale);
+        border:1px solid var(--accent); color:#5b4a31; margin-bottom:18px; font-size:14px; }
+
+  h2{ font-weight:700; letter-spacing:-.01em; }
+  @media (max-width:600px){
+    header.top,nav,main{ padding-left:16px; padding-right:16px; }
+  }
+</style></head><body>
+<header class="top"><img class="logo" src="file:///C:/Users/Admin03/Desktop/proekt/mirigrushek/images/icon.png" alt="logo"><h1>Каталог товаров</h1>
+<div class="who">Михайлюк Анна Вячеславовна · <b>Менеджер</b></div></header>
+<nav><a class="btn" href="#">Товары</a><a class="btn" href="#">Заказы</a><span style="flex:1"></span><a class="btn" href="#">Выйти</a></nav><main><form class="bar"><label>Поиск по наименованию<input type="text" placeholder="введите название…"></label><label>Категория<select><option>— все —</option></select></label><label>Сортировка<select><option>— без сортировки —</option></select></label><button class="btn accent" type="button">Применить</button><a class="btn" href="#">Сбросить</a></form><div class="grid"><div class="card sale">
+<img class="photo" src="file:///C:/Users/Admin03/Desktop/proekt/mirigrushek/images/1.jpg" alt="">
+<h3>Набор машинок «Щенячий патруль»</h3>
+<div class="meta"><span class="badge">Игровой набор</span><br>Детский набор машинок с героями мультсериала.<br>
+<small>Поставщик: Pikeshop · Производитель: ABSпластик</small><br>
+<small>На складе: 50 шт. · Скидка: 22%</small></div>
+<div class="price"><span class="old">1 414,00 ₽</span><span class="new">1 102,92 ₽</span></div></div><div class="card ">
+<img class="photo" src="file:///C:/Users/Admin03/Desktop/proekt/mirigrushek/images/7.jpg" alt="">
+<h3>Синтезатор детский с микрофоном</h3>
+<div class="meta"><span class="badge">Детский музыкальный инструмент</span><br>Компактный синтезатор с микрофоном для юных музыкантов.<br>
+<small>Поставщик: CHILITOY · Производитель: Junion</small><br>
+<small>На складе: 35 шт. · Скидка: 10%</small></div>
+<div class="price"><span class="old">1 749,00 ₽</span><span class="new">1 574,10 ₽</span></div></div><div class="card oos">
+<img class="photo" src="file:///C:/Users/Admin03/Desktop/proekt/mirigrushek/images/3.jpg" alt="">
+<h3>Музыкальные инструменты для детей</h3>
+<div class="meta"><span class="badge">Детский музыкальный инструмент</span><br>Ксилофон, барабаны, развивающие игрушки.<br>
+<small>Поставщик: Playbig · Производитель: BambiniFelici</small><br>
+<small>На складе: 0 шт. · Скидка: 15%</small></div>
+<div class="price"><span class="old">2 750,00 ₽</span><span class="new">2 337,50 ₽</span></div></div></div></main></body></html>
