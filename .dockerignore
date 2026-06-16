@@ -1,0 +1,6 @@
+.git
+build/
+README.md
+УСТАНОВКА.md
+*.sh
+init.sql
